@@ -1,4 +1,5 @@
 {
-  "email": "standard_user",
-  "senha": "secret_sauce"
+  "email": "standard_user",  
+  "senha": "secret_sauce",
+  "senhaErrada": "secret_sauce123"
 }

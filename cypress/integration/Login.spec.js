@@ -3,6 +3,7 @@ describe('Fazer login e logout', () => {
     before(() => {
         Cypress.env('TextoTelaInicial', 'div[class=login_logo]')
         Cypress.env('TelaProdutos', 'span[class="title"]')
+        Cypress.env('ErroLogin', '[data-test="error"]')
     })
     it('Visitar a Pagina', () => {
         cy.visit('')
@@ -11,6 +12,14 @@ describe('Fazer login e logout', () => {
         .should('be.visible')
         .and('have.text', 'Swag Labs')
     })
+
+    it('Erro de login', () => {
+        cy.DadosLoginErrado()
+        cy.get(Cypress.env('ErroLogin'))
+        .invoke('text')
+        .should('contain', 'Epic sadface: Username and password do not match any user in this service')
+    })
+
     it('Fazer login', () => {
         // Executa o comando personalizado "DadosLogin" para inserir as informações de login
         cy.DadosLogin()     
