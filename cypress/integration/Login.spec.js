@@ -3,7 +3,7 @@ describe('Fazer login e logout', () => {
     before(() => {
         Cypress.env('TextoTelaInicial', 'div[class=login_logo]')
         Cypress.env('TelaProdutos', 'span[class="title"]')
-        Cypress.env('ErroLogin', '[data-test="error"]')
+        Cypress.env('ErroLogin', 'h3[data-test="error"]')
     })
     it('Visitar a Pagina', () => {
         cy.visit('')
@@ -18,8 +18,8 @@ describe('Fazer login e logout', () => {
         cy.DadosLoginErrado()
         // Verifica a mensagem de erro ao usar dados errados no login
         cy.get(Cypress.env('ErroLogin'))
-        .invoke('text')
-        .should('contain', 'Epic sadface: Username and password do not match any user in this service')
+        .should('be.visible')
+        .and('have.text', 'Epic sadface: Username and password do not match any user in this service')
     })
 
     it('Fazer login', () => {
