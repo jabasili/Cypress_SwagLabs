@@ -14,7 +14,9 @@ describe('Fazer login e logout', () => {
     })
 
     it('Erro de login', () => {
+        // Executa o comando personalizado "DadosLoginErrado" para inserir as informações de login
         cy.DadosLoginErrado()
+        // Verifica a mensagem de erro ao usar dados errados no login
         cy.get(Cypress.env('ErroLogin'))
         .invoke('text')
         .should('contain', 'Epic sadface: Username and password do not match any user in this service')
