@@ -28,7 +28,8 @@ baixe o arquivo .ZIP
 ```
 Localize o arquivo baixado e extraia o conteúdo:  
 ```
-Entre na pasta extraida e vá até a pasta do projeto, apague o nome "-main", a pasta a ser aberta no VScode deve ter o nome de SAUCE_DEMO
+Entre na pasta extraida e vá até a pasta do projeto, apague o nome "-main", 
+a pasta a ser aberta no VScode deve ter o nome de SAUCE_DEMO
 ```
 Abra no VScode a pasta raiz do projeto e em seguida:  
 ```
