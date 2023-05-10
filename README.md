@@ -41,7 +41,7 @@ npm install cypress@9.4.1
 Siga as etapas para instalar corretamente
 
 ```
-git clone 'aqui a rota https do repositório'
+git clone https://github.com/jabasili/SAUCE_DEMO.git
 ```
 Abra no VScode a pasta raiz do projeto e em seguida:  
 ```
